@@ -18,6 +18,9 @@ class response{
     sessionExpired(res){
         return res.status(401).json({message : "You've been logged in from some other device. Please login again"});
     }
+    message(res, status, message){
+        return res.status(status).json({message});
+    }
 
 }
 response = new response();

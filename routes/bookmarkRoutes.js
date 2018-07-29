@@ -10,7 +10,7 @@ bookmarkerRouter.post('/create',auth.authenticate,(req,res,next) =>{
     validator.validate(req,res,next,['title','url','tags'])
 },function(req,res){
     if(req.body._id){
-        bookmarkController.editBookMark(req,res);
+        bookmarkController.editBookmark(req,res);
     }else{
         bookmarkController.addBookmark(req,res);
     }
