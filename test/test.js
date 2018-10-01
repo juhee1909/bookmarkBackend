@@ -88,6 +88,7 @@ describe('Create Bookmark',function(){
 })
 
 describe('Delete Bookmark',function(){
+    
     it('Bookmark deleted',function(done){
         console.log(_id);
         chai.request(server).delete('/bookmark/delete/' + _id ).set({Authorization}).end((err,res) =>{
